@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.Transparent.NoUI" parent="android:Theme.Translucent.NoTitleBar">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+</resources>
