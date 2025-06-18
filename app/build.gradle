@@ -1,23 +1,31 @@
-apply plugin: 'com.android.application'
-
 android {
-    namespace 'com.riprog.toast'
     compileSdkVersion 33
 
     defaultConfig {
         applicationId "com.riprog.toast"
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 11
+        versionName "1.1"
     }
 
     buildTypes {
         release {
+            minifyEnabled true
+            shrinkResources true
+        }
+        debug {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            shrinkResources false
         }
     }
+
+    namespace 'com.riprog.toast'
+}
+
+compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
 }
 
 dependencies {
